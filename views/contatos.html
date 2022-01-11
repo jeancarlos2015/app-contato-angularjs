@@ -1,0 +1,44 @@
+<div class="jumbotron">
+        
+    <div class="ui-content">
+      
+        <ui-alert ng-show="error" title="Ops, ocorreu um problema!">
+            Não foi possível carregar o conteúdo.
+        </ui-alert>
+
+        <input class="form-control" type="text" ng-model="criterioPesquisa" placeholder="Pesquisar">
+        <table ng-show="contatos.length > 0" class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Serial</th>
+                    <th><a href="" ng-click="ordenarPor('nome')">Nome</a></th>
+                    <th><a href="" ng-click="ordenarPor('telefone')">Telefone</a></th>
+                    <th>Data</th>
+                    <th>Operadora</th>
+                    <th>Cor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-class="{'selecionado negrito': contato.selecionado}"
+                    ng-repeat="contato in contatos | filter:{nome:criterioPesquisa} | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
+                    <td> <input type="checkbox" ng-model="contato.selecionado"> </td>
+                    <td>{{ contato.serial }}</td>
+                    <td ng-bind="contato.nome | name"></td>
+                    <td ng-bind="contato.telefone"></td>
+                    <td ng-bind="contato.data | date: 'dd/MM/yyyy HH:mm'"></td>
+                    <td ng-bind="contato.operadora.nome"></td>
+                    <td>
+                        <div style="width: 20px;height: 20px;" ng-style="{'background-color':contato.cor}"></div>
+                    </td>
+                </tr>
+            </tbody>
+
+
+        </table>
+        <hr>
+        <button class="btn btn-danger form-control" ng-click="apagarContatos(contatos)"
+        ng-if="isContatoSelecionado(contatos)">Apagar Contato</button>
+    </div>
+   
+</div>

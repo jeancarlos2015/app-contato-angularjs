@@ -1,0 +1,32 @@
+/* Title com borda */
+/* cor de fundo gradiente cinza mediano*/
+.ui-accordion-title{
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: .5em .5em .5em 1em;
+    border-bottom: 1px solid rgb(117, 117, 117);
+    cursor: pointer;
+    background-image: linear-gradient(to bottom, #f5f5f5 0%, #e6e6e6 100%);
+
+}
+.ui-accordion-title:hover{
+    background: #eee;
+}
+.ui-accordion-title:active{
+    background: #ddd;
+}
+.ui-accordion-content{
+    padding: .5em;
+    border-bottom: 1px solid rgb(117, 117, 117);
+    background-color: #fff;
+}
+.ui-accordion-content-active{
+    display: block;
+}
+.ui-accordion-content-active{
+    border-bottom: 1px solid #ccc;
+}
+.ui-accordion-content-active:last-child{
+    border-bottom: none;
+}
+
