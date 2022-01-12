@@ -1,10 +1,10 @@
-angular.module("listaTelefonica").factory("OperadorasAPI", function ($http) {
+angular.module("listaTelefonica").factory("OperadorasAPI", function ($http, config) {
     var _getOperadoras =   function () {
-      return $http.get('http://localhost:4545/api/v1/operadoras');
+      return $http.get(config.baseUrl + "/operadoras");
     }
   
     var _saveOperadora =   function (contato) {
-      return $http.post('http://localhost:4545/api/v1/operadora',contato);
+      return $http.post(config.baseUrl + "/operadora", contato);
     }
     return {
       saveOperadora: _saveOperadora,

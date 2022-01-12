@@ -23,21 +23,7 @@ angular
           };
       };
       $scope.selecionado = "selecionado";
-      $scope.adicionarContato = function (contato) {
-        contato.serial = serialGenerator.generate();
-        contato.data = new Date();
-        $scope.contatos.push(angular.copy(contato));
-        delete $scope.contato;
-        $scope.contatoForm.$setPristine();
-        // ContatosAPI.saveContatos(contato).then(
-        //     function (response) {
-        //         $scope.contatos.push(angular.copy(contato));
-        //         delete $scope.contato;
-        //         $scope.contatoForm.$setPristine();
-        //         // carregarContatos();
-        //     }
-        // )
-      };
+     
 
       $scope.apagarContatos = function (contatos) {
         $scope.contatos = contatos.filter(function (contato) {
