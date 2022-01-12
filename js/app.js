@@ -6,5 +6,5 @@ angular.module('listaTelefonica',
     'ui',
     'alert',
     'date',
-    'ngRoute',
+    'ngRoute'
 ]);

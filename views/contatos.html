@@ -1,5 +1,4 @@
 <div class="jumbotron">
-        
     <div class="ui-content">
       
         <ui-alert ng-show="error" title="Ops, ocorreu um problema!">
@@ -24,10 +23,10 @@
                     ng-repeat="contato in contatos | filter:{nome:criterioPesquisa} | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
                     <td> <input type="checkbox" ng-model="contato.selecionado"> </td>
                     <td>{{ contato.serial }}</td>
-                    <td ng-bind="contato.nome | name"></td>
-                    <td ng-bind="contato.telefone"></td>
-                    <td ng-bind="contato.data | date: 'dd/MM/yyyy'"></td>
-                    <td ng-bind="contato.operadora.nome"></td>
+                    <td><a href="#!/detalhesContato/{{ contato.serial }}">{{ contato.nome }}</a> </td>
+                    <td>{{ contato.telefone }}</td>
+                    <td>{{ contato.data | date: 'dd/MM/yyyy' }}</td>
+                    <td>{{ contato.operadora.nome }}</td>
                     <td>
                         <div style="width: 20px;height: 20px;" ng-style="{'background-color':contato.cor}"></div>
                     </td>
