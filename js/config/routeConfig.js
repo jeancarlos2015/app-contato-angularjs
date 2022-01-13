@@ -8,26 +8,29 @@ angular.module("listaTelefonica").config(function ($routeProvider) {
       },
       operadoras: function (operadorasAPI) {
         return operadorasAPI.getOperadoras();
-      }
-
-    }
+      },
+    },
   });
+
   $routeProvider.when("/novoContato", {
     templateUrl: "views/novoContato.html",
     controller: "novoContatoCtrl",
-    resolve:{
+    resolve: {
       operadoras: function (operadorasAPI) {
         return operadorasAPI.getOperadoras();
-      }
-    }
+      },
+    },
   });
+
   $routeProvider.when("/detalhesContato/:id", {
     templateUrl: "views/detalhesContato.html",
     controller: "DetalheContatoCrtl",
     resolve: {
       contato: function (contatosAPI, $route) {
         return contatosAPI.getContato($route.current.params.id);
-      }
-    }
+      },
+    },
   });
+
+  $routeProvider.otherwise({ redirectTo: "/contatos" });
 });

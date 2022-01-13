@@ -11,9 +11,14 @@ angular
     var _getContato = function (id) {
       return $http.get(config.baseUrl + "/contato/id/" + id);
     }
+
+    var _deleteContato = function (id) {
+      return $http.delete(config.baseUrl + "/contato/id/" + id);
+    }
     return {
       saveContatos: _saveContatos,
       getContatos: _getContatos,
       getContato: _getContato,
+      deleteContato: _deleteContato
     };
   });

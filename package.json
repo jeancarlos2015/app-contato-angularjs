@@ -1,0 +1,32 @@
+{
+  "name": "app-agenda-telefonica",
+  "version": "1.0.0",
+  "description": "Desenvolvido por Jean Carlos Penas",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "http-server": "^14.1.0",
+    "express": "^4.17.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start":"http-server -p 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeancarlos2015/app-contato-angularjs.git"
+  },
+  "keywords": [
+    "JAVASCRIPT",
+    "HTML",
+    "CSS"
+  ],
+  "author": "Jean Carlos Penas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeancarlos2015/app-contato-angularjs/issues"
+  },
+  "homepage": "https://github.com/jeancarlos2015/app-contato-angularjs#readme"
+}

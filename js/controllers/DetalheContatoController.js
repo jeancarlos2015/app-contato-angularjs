@@ -3,7 +3,7 @@ angular
   .controller(
     "DetalheContatoCrtl",
     function ($scope, contato, $routeParams) {
-       $scope.app = "Lista Telefônica";
+       $scope.app = "Detalhes do Contato";
        $scope.contato = contato.data;
     }
   );

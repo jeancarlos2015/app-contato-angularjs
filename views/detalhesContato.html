@@ -1,0 +1,34 @@
+<div class="jumbotron">
+    <h4>{{ app }}</h4>
+    <table class="table">
+        <tr>
+            <td>Id:</td>
+            <td>{{ contato.serial }}</td>
+        </tr>
+        <tr>
+            <td>Nome:</td>
+            <td>{{ contato.nome }}</td>
+        </tr>
+        <tr>
+            <td>Telefone:</td>
+            <td>{{ contato.telefone }}</td>
+        </tr>
+        <tr>
+            <td>Data:</td>
+            <td>{{ contato.data | date: 'dd/MM/yyyy' }}</td>
+        </tr>
+        <tr>
+            <td>Cor:</td>
+            <td>{{ contato.cor }}</td>
+        </tr>
+        <tr>
+            <td>Operadora:</td>
+            <td>{{ contato.operadora.nome }}</td>
+        </tr>
+        <tr>
+            <td>Categoria:</td>
+            <td>{{ contato.operadora.categoria }}</td>
+        </tr>
+
+    </table>
+</div>
